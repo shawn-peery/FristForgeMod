@@ -1,6 +1,7 @@
 package com.shawn.firstforgemod.item;
 
 import com.shawn.firstforgemod.FirstForgeMod;
+import com.shawn.firstforgemod.item.custom.MetalDecetorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,6 +16,8 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire", () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector", () -> new MetalDecetorItem(new Item.Properties().durability(100)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

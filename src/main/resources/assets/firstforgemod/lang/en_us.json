@@ -1,6 +1,8 @@
 {
   "item.firstforgemod.sapphire": "Sapphire",
   "item.firstforgemod.raw_sapphire": "Raw Sapphire",
+  "item.firstforgemod.metal_detector": "Metal Detector",
+
   "block.firstforgemod.sapphire_block": "Block of Sapphire",
   "block.firstforgemod.raw_sapphire_block": "Block of Raw Sapphire",
   "block.firstforgemod.sapphire_ore": "Sapphire Ore",
