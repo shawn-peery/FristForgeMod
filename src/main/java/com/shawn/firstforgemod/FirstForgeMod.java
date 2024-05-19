@@ -1,6 +1,8 @@
 package com.shawn.firstforgemod;
 
 import com.mojang.logging.LogUtils;
+import com.shawn.firstforgemod.item.ModCreativeModeTabs;
+import com.shawn.firstforgemod.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
@@ -40,6 +42,10 @@ public class FirstForgeMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -55,6 +61,12 @@ public class FirstForgeMod
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+        // Used to add custom items to already exisiting creative tabs.
+
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.SAPPHIRE);
+            event.accept(ModItems.RAW_SAPPHIRE);
+        }
     }
 
     @SubscribeEvent
