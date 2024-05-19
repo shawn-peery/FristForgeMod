@@ -1,4 +1,4 @@
-package com.example.firstforgemod;
+package com.shawn.firstforgemod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
