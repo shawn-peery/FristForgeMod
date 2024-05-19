@@ -3,5 +3,10 @@
   "item.firstforgemod.raw_sapphire": "Raw Sapphire",
   "block.firstforgemod.sapphire_block": "Block of Sapphire",
   "block.firstforgemod.raw_sapphire_block": "Block of Raw Sapphire",
+  "block.firstforgemod.sapphire_ore": "Sapphire Ore",
+  "block.firstforgemod.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.firstforgemod.nether_sapphire_ore": "Nether Sapphire Ore",
+  "block.firstforgemod.end_stone_sapphire_ore": "Endstone Sapphire Ore",
+
   "creativetab.first_forge_mod_tab": "Sapphire First Forge Mod Tab"
 }
