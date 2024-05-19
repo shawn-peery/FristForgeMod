@@ -1,6 +1,7 @@
 package com.shawn.firstforgemod;
 
 import com.mojang.logging.LogUtils;
+import com.shawn.firstforgemod.block.ModBlocks;
 import com.shawn.firstforgemod.item.ModCreativeModeTabs;
 import com.shawn.firstforgemod.item.ModItems;
 import net.minecraft.client.Minecraft;
@@ -45,6 +46,7 @@ public class FirstForgeMod
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
