@@ -14,38 +14,19 @@ public class ControllableListener implements ControllerEvents.Button {
 
     private static boolean interatingLocked = false;
 
-    private static Float previousRValue = null;
+    private static boolean evenHit = false;
+
 
     @Override
     public boolean handle(Controller controller) {
 
-
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-
-
-        float rTriggerValue = controller.getRTriggerValue();
-
-
-        System.out.printf("rTriggerValue: %f%n", rTriggerValue);
-
-        System.out.printf("previousRValue: %f%n", previousRValue);
-        if (previousRValue == null) {
-
-            System.out.print("previousRValue is null. setting it to previous r value and returning.");
-            previousRValue = rTriggerValue;
+        if (!evenHit) {
+            evenHit = true;
             return false;
         }
 
-        System.out.printf("previousRValue is not null!");
+        evenHit = false;
 
-        if (previousRValue >= rTriggerValue) {
-
-            System.out.print("previousRValue is greaterthan or equal to rTriggerValue. Returning");
-            return false;
-        }
 
         interatingLocked = !interatingLocked;
 
