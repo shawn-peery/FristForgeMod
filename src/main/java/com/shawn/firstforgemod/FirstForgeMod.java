@@ -3,6 +3,7 @@ package com.shawn.firstforgemod;
 import com.mojang.logging.LogUtils;
 //import com.mrcrayfish.controllable.Controllable;
 //import com.mrcrayfish.controllable.ControllableMod;
+import com.mrcrayfish.controllable.event.ControllerEvents;
 import com.shawn.firstforgemod.block.ModBlocks;
 import com.shawn.firstforgemod.item.ModCreativeModeTabs;
 import com.shawn.firstforgemod.item.ModItems;
@@ -45,13 +46,13 @@ public class FirstForgeMod
     public FirstForgeMod()
     {
 
-//        Controllable.getManager().
+
 
 
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        modEventBus.register(new ControllableListener());
+        ControllerEvents.BUTTON.register(new ControllableListener());
 
         ModCreativeModeTabs.register(modEventBus);
 
